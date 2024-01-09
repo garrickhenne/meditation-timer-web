@@ -1,1 +1,1 @@
-# meditation-timer-web
+# Meditation Timer
