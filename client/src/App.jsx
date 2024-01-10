@@ -1,11 +1,15 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './views/Home'
 
 function App() {
 
   return (
-    <>
-      <h1>Meditation Timer</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
