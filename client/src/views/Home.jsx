@@ -4,7 +4,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Meditation Timer</h1>
+      <h1>Calmly</h1>
       <MeditationControl />
     </div>
   );
