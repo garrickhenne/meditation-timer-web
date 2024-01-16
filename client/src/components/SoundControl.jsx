@@ -7,7 +7,6 @@ const SoundControl = () => {
 
   return (
     <>
-      <label htmlFor='sounds'>Sounds: </label>
       <select name='sounds' id='sounds' className='bg-transparent' onChange={ e => changeSound(e.target.value) } value={ selectedSound }>
         { Object.keys(FILE_MAP).map(sound => {
           return <option key={sound} value={FILE_MAP[sound]}>{ sound }</option>
