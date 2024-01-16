@@ -1,6 +1,5 @@
 import MeditationControl from '../components/MeditationControl';
 import SoundControl from '../components/SoundControl';
-import { soundContext } from '../providers/SoundProvider';
 import SoundProvider from '../providers/SoundProvider';
 
 const Home = () => {

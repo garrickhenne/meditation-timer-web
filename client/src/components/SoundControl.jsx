@@ -3,8 +3,6 @@ import { useContext } from 'react';
 import { soundContext } from '../providers/SoundProvider';
 
 const SoundControl = () => {
-  // Default to  in FILE_MAP, TODO: change later to whatever user has set.
-  // Contains the file paths for the sounds.
   const { selectedSound, changeSound } = useContext(soundContext);
 
   return (

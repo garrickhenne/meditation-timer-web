@@ -12,7 +12,7 @@ const SoundProvider = ({ children }) => {
    * @param {string} sound the name of the sound to change to.
    */
   const changeSound = (sound) => {
-    setSelectedSound(FILE_MAP[sound]);
+    setSelectedSound(sound);
   };
 
   return (

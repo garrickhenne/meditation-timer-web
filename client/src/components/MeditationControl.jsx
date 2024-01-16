@@ -22,7 +22,7 @@ const MeditationControl = () => {
       setCountdown((prevCountdown) => prevCountdown - 1);
     }, ONE_SECOND);
     setTimerId(id);
-    console.log(selectedSound);
+    // TODO: This is for testing purposes, ideally this would be called when timer completes.
     playSound(selectedSound);
   };
 
