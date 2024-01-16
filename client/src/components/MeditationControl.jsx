@@ -2,11 +2,15 @@ import { useState } from 'react';
 import Timer from './Timer';
 import PlayButton from './PlayButton';
 import StopButton from './StopButton';
+import { useContext } from 'react';
+import { soundContext } from '../providers/SoundProvider';
+import { playSound } from '../util/SoundUtil';
 
 const FIVE_MINUTES = 5 * 60;
 const ONE_SECOND = 1000;
 
 const MeditationControl = () => {
+  const { selectedSound } = useContext(soundContext);
   // countdown is in seconds.
   // TODO: This could be refactored into a custom hook.
   const [countdown, setCountdown] = useState(FIVE_MINUTES);
@@ -18,6 +22,8 @@ const MeditationControl = () => {
       setCountdown((prevCountdown) => prevCountdown - 1);
     }, ONE_SECOND);
     setTimerId(id);
+    console.log(selectedSound);
+    playSound(selectedSound);
   };
 
   const stopTimer = () => {
