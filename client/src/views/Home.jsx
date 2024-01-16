@@ -5,8 +5,7 @@ import SoundProvider from '../providers/SoundProvider';
 const Home = () => {
 
   return (
-    <div>
-      <h1>Calmly</h1>
+    <div className='min-h-[80vh] inline-flex flex-col justify-center'>
       <SoundProvider>
         <SoundControl />
         <MeditationControl />
