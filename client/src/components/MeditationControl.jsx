@@ -19,6 +19,12 @@ const MeditationControl = () => {
   const startTimer = () => {
     if (timerId) clearInterval(timerId);
     const id = setInterval(() => {
+      if (countdown <= 0) {
+        // TODO: Something about logging the finished meditation here.
+        clearInterval(id);
+        setCountdown(FIVE_MINUTES);
+        return;
+      }
       setCountdown((prevCountdown) => prevCountdown - 1);
     }, ONE_SECOND);
     setTimerId(id);
