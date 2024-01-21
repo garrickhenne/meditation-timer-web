@@ -1,6 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
+const cookieSession = require('cookie-session');
 const port = 3000;
+
+app.use(cookieSession({
+  name: 'session',
+  keys: [process.env.COOKIE_KEY]
+}));
 
 app.get('/', (req, res) => {
   res.send('hello world');
