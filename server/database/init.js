@@ -1,15 +1,15 @@
-const { CreateTableCommand, DynamoDBClient, ListTablesCommand } = require('@aws-sdk/client-dynamodb');
+import { CreateTableCommand, DynamoDBClient, ListTablesCommand } from '@aws-sdk/client-dynamodb';
 
 const client = new DynamoDBClient({});
 
-const checkMeditationsTableExists = async () => {
+export const checkMeditationsTableExists = async () => {
   const command = new ListTablesCommand({});
   const response = await client.send(command);
   console.log(response);
   return response;
 };
 
-const createMeditationsTable = async () => {
+export const createMeditationsTable = async () => {
   const command = new CreateTableCommand({
     TableName: 'Meditations',
 
@@ -42,9 +42,4 @@ const createMeditationsTable = async () => {
   const response = await client.send(command);
   console.log(response);
   return response;
-};
-
-module.exports = {
-  createMeditationsTable,
-  checkMeditationsTableExists
 };
